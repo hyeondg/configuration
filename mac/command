@@ -1,0 +1,2 @@
+defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock #reset launchpad
+defaults write -g ApplePressAndHoldEnabled -bool false #disable diacritics
