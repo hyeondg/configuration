@@ -12,9 +12,9 @@ set secure
 set hidden
 set wildmenu
 set showcmd
-set ts=2
-set sts=2
-set shiftwidth=2
+set ts=4
+set sts=4
+set shiftwidth=4
 set expandtab
 set smarttab
 set si
