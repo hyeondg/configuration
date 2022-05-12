@@ -35,7 +35,7 @@ set t_8f=[38;2;%lu;%lu;%lum
 colorscheme peachpuff
 set background=dark
 "set termguicolors
-set colorcolumn=80
+set colorcolumn=100
 highlight Comment ctermfg=Green
 highlight ColorColumn ctermbg=darkgray
 highlight CursorLine term=bold cterm=none ctermbg=none ctermfg=none gui=bold
