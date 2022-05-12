@@ -20,9 +20,8 @@ set smarttab
 set si
 set ai
 set nu
+set cinoptions=L0,g0,l1,:0
 set cin
-set cinoptions+=L0
-set cinoptions+=g0
 set hlsearch
 set ruler
 set vb t_vb=
