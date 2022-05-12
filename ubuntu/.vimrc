@@ -27,6 +27,7 @@ set ruler
 set vb t_vb=
 inoremap <c-u> <c-g>u<c-u>
 inoremap <c-w> <c-g>u<c-w>
+map K <nop>
 set backspace=indent,eol,start
 set t_Co=256
 set t_8b=[48;2;%lu;%lu;%lum
