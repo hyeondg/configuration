@@ -4,10 +4,14 @@ PointerAlignment: Left
 AlwaysBreakTemplateDeclarations: true
 ColumnLimit: 100
 
-#Only for me! --disable-git-clang-format
-#IndentWidth: 8
-#AccessModifierOffset: -8
-#ContinuationIndentWidth: 8
-#ConstructorInitializerIndentWidth: 8
+#BEGIN_git_clang_format
+#BasedOnStyle: LLVM 
+#DerivePointerAlignment: false
+#PointerAlignment: Left
+#AlwaysBreakTemplateDeclarations: true
+#IndentWidth: 4
+#AccessModifierOffset: -4
+#ContinuationIndentWidth: 4
+#ConstructorInitializerIndentWidth: 4
 #ColumnLimit: 100
-
+#END_git_clang_format
