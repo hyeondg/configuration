@@ -2,6 +2,8 @@ BasedOnStyle: LLVM
 DerivePointerAlignment: false
 PointerAlignment: Left
 AlwaysBreakTemplateDeclarations: true
+SpaceBeforeParens: Never
+SpaceAfterTemplateKeyword: false
 ColumnLimit: 100
 
 #BEGIN_git_clang_format
