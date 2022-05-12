@@ -21,7 +21,7 @@ tty_bold="$(tty_mkbold 39)"
 tty_reset="$(tty_escape 0)"
 
 pt() {
-  printf "${tty_blue}==>${tty_bold} %s${tty_reset}\n" "$@"
+  printf "${tty_blue}===>${tty_bold} %s${tty_reset}\n" "$@"
 }
 
 if [ -z "${BASH_VERSION:-}" ]; then
@@ -49,15 +49,15 @@ if [[ "$OS" == "Darwin" ]]; then
   pt "Configuring tmux"
   brew install tmux 
 
-  curl -fsSl https://raw.githubusercontent.com/$GITNAME/config/HEAD/mac/.bash_profile > ~/.bash_profile
+  curl -fsSl https://raw.githubusercontent.com/$GITNAME/configuration/HEAD/macos/.bash_profile > ~/.bash_profile
   source ~/.bash_profile
   
   pt "Configuring vim"
   brew install vim
 
-  curl -fsSl https://raw.githubusercontent.com/$GITNAME/config/HEAD/mac/.tmux.conf > ~/.tmux.conf
-  curl -fsSl https://raw.githubusercontent.com/$GITNAME/config/HEAD/mac/.inputrc > ~/.inputrc
-  curl -fsSl https://raw.githubusercontent.com/$GITNAME/config/HEAD/mac/.vimrc > ~/.vimrc
+  curl -fsSl https://raw.githubusercontent.com/$GITNAME/configuration/HEAD/macos/.tmux.conf > ~/.tmux.conf
+  curl -fsSl https://raw.githubusercontent.com/$GITNAME/configuration/HEAD/macos/.inputrc > ~/.inputrc
+  curl -fsSl https://raw.githubusercontent.com/$GITNAME/configuration/HEAD/macos/.vimrc > ~/.vimrc
   
   pt "Configuring python"
   brew install python3
@@ -69,11 +69,9 @@ if [[ "$OS" == "Darwin" ]]; then
   cd
   mkdir -p .colorschemes
   cd .colorschemes 
-  curl -fsSl https://raw.githubusercontent.com/$GITNAME/config/HEAD/mac/Snazzy.terminal > Snazzy.terminal 
-  curl -fsSl https://raw.githubusercontent.com/$GITNAME/config/HEAD/mac/ProRes.terminal > ProRes.terminal
+  curl -fsSl https://raw.githubusercontent.com/$GITNAME/configuration/HEAD/macos/Snazzy.terminal > Snazzy.terminal 
+  curl -fsSl https://raw.githubusercontent.com/$GITNAME/configuration/HEAD/macos/ProRes.terminal > ProRes.terminal
   
-  mkdir -p ~/.ipython/profile_default/startup
-  curl -fsSl https://raw.githubusercontent.com/$GITNAME/config/HEAD/start.py > ~/.ipython/profile_default/startup/start.py
 elif [[ "$OS" == "Linux" ]]; then #ubuntu
   sudo apt update && sudo apt upgrade
   # sudo dnf update
@@ -88,7 +86,7 @@ elif [[ "$OS" == "Linux" ]]; then #ubuntu
   sudo apt install tmux
   # sudo dnf install tmux
   
-  curl -fsSl https://raw.githubusercontent.com/$GITNAME/config/HEAD/ubuntu/.bashrc >> ~/.bashrc
+  curl -fsSl https://raw.githubusercontent.com/$GITNAME/configuration/HEAD/ubuntu/.bashrc >> ~/.bashrc
   source ~/.bashrc
   
   #pt "Configuring gnome-tweak-tool"
@@ -104,9 +102,9 @@ elif [[ "$OS" == "Linux" ]]; then #ubuntu
   pt "Configuring git"
   sudo apt install git
   
-  curl -fsSl https://raw.githubusercontent.com/$GITNAME/config/HEAD/ubuntu/.tmux.conf > ~/.tmux.conf
-  curl -fsSl https://raw.githubusercontent.com/$GITNAME/config/HEAD/ubuntu/.inputrc > ~/.inputrc
-  curl -fsSl https://raw.githubusercontent.com/$GITNAME/config/HEAD/ubuntu/.vimrc > ~/.vimrc
+  curl -fsSl https://raw.githubusercontent.com/$GITNAME/configuration/HEAD/ubuntu/.tmux.conf > ~/.tmux.conf
+  curl -fsSl https://raw.githubusercontent.com/$GITNAME/configuration/HEAD/ubuntu/.inputrc > ~/.inputrc
+  curl -fsSl https://raw.githubusercontent.com/$GITNAME/configuration/HEAD/ubuntu/.vimrc > ~/.vimrc
 fi 
 pt "Configuring vundle"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
