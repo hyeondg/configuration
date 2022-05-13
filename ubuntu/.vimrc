@@ -79,11 +79,11 @@ set statusline+=%1*
 set statusline+=|
 set statusline+=%y
 set statusline+=%{b:gitbranch}
-hi User2 ctermbg=lightgreen ctermfg=black guibg=lightgreen guifg=black
+hi User2 ctermbg=darkgreen ctermfg=white guibg=darkgreen guifg=black term=bold
 hi User1 ctermbg=black ctermfg=white guibg=black guifg=white
 hi User3 ctermbg=black ctermfg=lightblue guibg=black guifg=lightblue
 hi User4 ctermbg=black ctermfg=lightgreen guibg=black guifg=lightgreen
-hi User5 ctermbg=black ctermfg=magenta guibg=black guifg=magenta
+hi User5 ctermbg=black ctermfg=darkgreen guibg=black guifg=magenta
 
 function! StatuslineMode()
   let l:mode=mode()
