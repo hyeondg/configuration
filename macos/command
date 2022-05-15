@@ -1,2 +1,7 @@
 defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock #reset launchpad
 defaults write -g ApplePressAndHoldEnabled -bool false #disable diacritics
+
+#!/usr/bin/bash   
+for i in {0..255} ; do
+  printf "\x1b[38;5;${i}mcolour${i} "
+done
